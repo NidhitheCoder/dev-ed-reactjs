@@ -42,3 +42,6 @@ Learn reactjs with react js tutorial by Dev Ed
 
 - package.json
   - It contains some scripts
+
+  ## What is a component?
+  - A component is a file that holds all the logic,html and even styling in one file.
