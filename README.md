@@ -45,3 +45,7 @@ Learn reactjs with react js tutorial by Dev Ed
 
   ## What is a component?
   - A component is a file that holds all the logic,html and even styling in one file.
+
+  # Redux
+  - To install run 'npm install redux react-redux'
+      In this redux in the actually state management. react-redux gives us to ability to connect react and redux together. 
