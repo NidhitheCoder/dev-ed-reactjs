@@ -47,5 +47,11 @@ Learn reactjs with react js tutorial by Dev Ed
   - A component is a file that holds all the logic,html and even styling in one file.
 
   # Redux
+  - Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces.
   - To install run 'npm install redux react-redux'
       In this redux in the actually state management. react-redux gives us to ability to connect react and redux together. 
+  - Store,Action,Reducer
+  - Store - It is a globalized state.
+  - Action - It just give whatever want to do(what function is need to happen).
+  - Reducer - How your actions transform the state into next state.
+  - Dispatch - Dispatch is like an intermediate.
