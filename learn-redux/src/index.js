@@ -26,7 +26,7 @@ const decreament = () => {
 const counter = (state=0 ,action ) => {
   switch(action.type){
     case 'INCREMENT':
-      return state+1;
+      return state +1;
     case 'DECREMENT':
       return state -1;
       default:
@@ -35,8 +35,13 @@ const counter = (state=0 ,action ) => {
 }
 
 let store = createStore(counter);
-// DISPATCH
+// Display it in the console
+store.subscribe(()=>console.log(store.getState()))
 
+// DISPATCH
+ store.dispatch(increment());
+ store.dispatch(decreament());
+ store.dispatch(decreament());
 
 ReactDOM.render(
   <React.StrictMode>
