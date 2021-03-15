@@ -3,49 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import{createStore} from 'redux';
+import allReducer from './reducers'; // automatically lookup index file
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
 
-
-// STORE -> GLOBALIZED STATE
-
-// ACTION INCREMENT
-const increment = () => {
-  return{
-    type:'INCREMENT'
-  }
-}
-
-const decreament = () => {
-  return{
-    type:"DECREMENT"
-  }
-}
-
-// REDUCER
-
-const counter = (state=0 ,action ) => {
-  switch(action.type){
-    case 'INCREMENT':
-      return state +1;
-    case 'DECREMENT':
-      return state -1;
-      default:
-        return state;
-  }
-}
-
-let store = createStore(counter);
-// Display it in the console
-store.subscribe(()=>console.log(store.getState()))
-
-// DISPATCH
- store.dispatch(increment());
- store.dispatch(decreament());
- store.dispatch(decreament());
+const myStore = createStore(allReducer)
 
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={myStore}>
     <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
